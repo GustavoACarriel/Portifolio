@@ -1,0 +1,161 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.content {
+  text-align: center;
+  z-index: 1;
+}
+
+.greeting {
+  font-family: 'Fira Code', monospace;
+  color: var(--accent-light);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.name {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.role {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.description {
+  max-width: 540px;
+  margin: 0 auto 40px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.btnPrimary {
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(108, 99, 255, 0.4);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--accent-light);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollDot {
+  width: 28px;
+  height: 44px;
+  border: 2px solid rgba(108, 99, 255, 0.4);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.scrollDot::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: scrollAnim 1.8s infinite;
+}
+
+@keyframes scrollAnim {
+  0% { opacity: 1; top: 6px; }
+  100% { opacity: 0; top: 26px; }
+}

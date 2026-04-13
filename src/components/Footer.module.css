@@ -1,0 +1,18 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  text-align: center;
+}
+
+.text {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.text span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}

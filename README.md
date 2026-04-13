@@ -12,7 +12,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/GustavoACarriel">
+  <a href="https://portifolio-gustavoacarriels-projects.vercel.app">
     <img src="https://img.shields.io/badge/Acessar_Portfólio-6c63ff?style=for-the-badge&logo=googlechrome&logoColor=white"/>
   </a>
 </p>
